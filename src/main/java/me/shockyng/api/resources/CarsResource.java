@@ -1,5 +1,6 @@
 package me.shockyng.api.resources;
 
+import jakarta.validation.Valid;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import me.shockyng.api.dtos.CarDTO;
@@ -26,7 +27,7 @@ public class CarsResource {
     }
 
     @POST
-    public CarDTO craeteCar(CarDTO carDTO) {
+    public CarDTO craeteCar(@Valid CarDTO carDTO) {
         return service.createCar(carDTO);
     }
 

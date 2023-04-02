@@ -1,8 +1,10 @@
 package me.shockyng.api.daos;
 
 import jakarta.persistence.*;
+import me.shockyng.api.NoDataAtTheDataBaseException;
 
 import java.util.List;
+import java.util.Objects;
 
 public abstract class BaseDAO<E, ID extends Number> {
 
@@ -15,7 +17,9 @@ public abstract class BaseDAO<E, ID extends Number> {
     }
 
     public E findOneById(ID id) {
-        return entityManager.find(entityClass, id);
+        E entity = entityManager.find(entityClass, id);
+        verifyIfEntityNull(entity, id);
+        return entity;
     }
 
     public List<E> findAll() {
@@ -33,6 +37,7 @@ public abstract class BaseDAO<E, ID extends Number> {
 
     public void delete(ID id) {
         E entity = findOneById(id);
+        verifyIfEntityNull(entity, id);
         beginTransaction();
         entityManager.remove(entity);
         commitTransaction();
@@ -60,5 +65,9 @@ public abstract class BaseDAO<E, ID extends Number> {
         } catch (IllegalStateException | PersistenceException e) {
             e.printStackTrace();
         }
+    }
+
+    private void verifyIfEntityNull(E entity, ID id) {
+        if (Objects.isNull(entity)) throw new NoDataAtTheDataBaseException(entityClass, id);
     }
 }

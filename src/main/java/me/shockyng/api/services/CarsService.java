@@ -15,7 +15,10 @@ public class CarsService {
     private final CarsDAO dao = new CarsDAO();
 
     public List<CarDTO> getAllCars() {
-        return dao.findAll().stream().map(CarMapper.INSTANCE::carToCarDTO).collect(Collectors.toList());
+        return dao.findAll()
+                .stream()
+                .map(CarMapper.INSTANCE::carToCarDTO)
+                .collect(Collectors.toList());
     }
 
     public CarDTO getOneCar(Long id) {
