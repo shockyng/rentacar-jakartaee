@@ -2,9 +2,9 @@ package me.shockyng.api.services;
 
 import jakarta.ejb.Stateless;
 import me.shockyng.api.daos.CarsDAO;
-import me.shockyng.api.dtos.CarDTO;
+import me.shockyng.api.data.dtos.CarDTO;
 import me.shockyng.api.mappers.CarMapper;
-import me.shockyng.api.models.Car;
+import me.shockyng.api.data.models.Car;
 
 import java.util.List;
 import java.util.stream.Collectors;
