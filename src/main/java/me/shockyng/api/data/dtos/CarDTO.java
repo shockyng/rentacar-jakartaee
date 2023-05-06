@@ -1,4 +1,4 @@
-package me.shockyng.api.dtos;
+package me.shockyng.api.data.dtos;
 
 import jakarta.validation.constraints.Size;
 import jakarta.xml.bind.annotation.XmlRootElement;

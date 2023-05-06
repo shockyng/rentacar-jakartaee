@@ -1,4 +1,4 @@
-package me.shockyng.api.dtos;
+package me.shockyng.api.data.dtos;
 
 public record EngineDTO(
         Long id,
