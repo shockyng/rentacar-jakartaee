@@ -5,9 +5,12 @@
              version="3.0">
 
     <persistence-unit name="rentacar-pu" transaction-type="RESOURCE_LOCAL">
+
         <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
-        <class>me.shockyng.api.models.Car</class>
-        <class>me.shockyng.api.models.Engine</class>
+
+        <class>me.shockyng.api.data.models.Car</class>
+        <class>me.shockyng.api.data.models.Engine</class>
+
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
             <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/rent-a-car-db"/>
