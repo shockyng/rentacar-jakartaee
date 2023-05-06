@@ -1,4 +1,4 @@
-package me.shockyng.api.models;
+package me.shockyng.api.data.models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
