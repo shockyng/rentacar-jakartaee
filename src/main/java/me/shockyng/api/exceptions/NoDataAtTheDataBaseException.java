@@ -1,4 +1,4 @@
-package me.shockyng.api;
+package me.shockyng.api.exceptions;
 
 public class NoDataAtTheDataBaseException extends RuntimeException {
 
