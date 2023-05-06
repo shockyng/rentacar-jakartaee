@@ -1,7 +1,7 @@
 package me.shockyng.api.daos;
 
 import jakarta.persistence.*;
-import me.shockyng.api.NoDataAtTheDataBaseException;
+import me.shockyng.api.exceptions.NoDataAtTheDataBaseException;
 
 import java.util.List;
 import java.util.Objects;
