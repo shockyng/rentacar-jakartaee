@@ -1,7 +1,7 @@
 package me.shockyng.api.mappers;
 
-import me.shockyng.api.dtos.EngineDTO;
-import me.shockyng.api.models.Engine;
+import me.shockyng.api.data.dtos.EngineDTO;
+import me.shockyng.api.data.models.Engine;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

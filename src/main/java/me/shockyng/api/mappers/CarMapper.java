@@ -1,7 +1,7 @@
 package me.shockyng.api.mappers;
 
-import me.shockyng.api.dtos.CarDTO;
-import me.shockyng.api.models.Car;
+import me.shockyng.api.data.dtos.CarDTO;
+import me.shockyng.api.data.models.Car;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
