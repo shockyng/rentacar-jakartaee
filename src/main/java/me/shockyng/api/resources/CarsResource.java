@@ -3,7 +3,7 @@ package me.shockyng.api.resources;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
-import me.shockyng.api.dtos.CarDTO;
+import me.shockyng.api.data.dtos.CarDTO;
 import me.shockyng.api.services.CarsService;
 
 import java.util.List;
@@ -27,7 +27,7 @@ public class CarsResource {
     }
 
     @POST
-    public CarDTO craeteCar(@Valid CarDTO carDTO) {
+    public CarDTO createCar(@Valid CarDTO carDTO) {
         return service.createCar(carDTO);
     }
 
@@ -39,7 +39,7 @@ public class CarsResource {
 
     @DELETE
     @Path("/{id}")
-    public void delelteCar(@PathParam("id") Long id) {
+    public void deleteCar(@PathParam("id") Long id) {
         service.deleteCar(id);
     }
 
