@@ -23,7 +23,7 @@ public class Car {
     private String name;
 
     @Column(name = "CAR_YEAR")
-    private Integer year;
+    private Long year;
 
     @ManyToOne
     @JoinColumn(name = "ENGINE_FK")
@@ -45,11 +45,11 @@ public class Car {
         this.name = name;
     }
 
-    public Integer getYear() {
+    public Long getYear() {
         return year;
     }
 
-    public void setYear(Integer year) {
+    public void setYear(Long year) {
         this.year = year;
     }
 
