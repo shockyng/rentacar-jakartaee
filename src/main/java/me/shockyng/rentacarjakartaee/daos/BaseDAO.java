@@ -13,7 +13,6 @@ public abstract class BaseDAO<E, ID extends Number> {
 
     public BaseDAO(Class<E> entityClass) {
         this.entityClass = entityClass;
-        Persistence.createEntityManagerFactory("rentacar-pu");
         this.entityManager = Persistence.createEntityManagerFactory("rentacar-pu").createEntityManager();
     }
 
